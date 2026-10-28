@@ -51,7 +51,7 @@ edge_set kruskal_MST(edge_set E, int n) {
         edge e = E.edges[i];
 
         if (dsu_find(&dsu, e.u) != dsu_find(&dsu, e.v)) {
-            edge_set_add(&E, e);
+            edge_set_add(&MST_E, e);
             dsu_union(&dsu, e.u, e.v);
         }
     }
